@@ -1,24 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
-
+import { useSlotProps } from "@mui/base";
+import "../src/styles/styles.scss";
+// import ItemListContainer from "./components/ItemList/ItemListContainer";
+import NavBar from "./components/NavBar/NavBar";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className="App">
+        <NavBar color="accent"></NavBar>
+      </div>
+    </>
   );
 }
 

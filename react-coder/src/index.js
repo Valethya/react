@@ -1,22 +1,15 @@
 import React from "react";
-import ReactDOM from "react-dom";
-// import './index.css';
-// import App from './App';
-// import reportWebVitals from './reportWebVitals';
+import ReactDOM from "react-dom/client";
+import { ThemeProvider } from "@mui/material/styles";
+import theme from "../src/theme.jsx";
 
-// const root = ReactDOM.createRoot(document.getElementById('root'));
-// root.render(
-//   <React.StrictMode>
-//     <App />
-//   </React.StrictMode>
-// );
+import "./styles/styles.scss";
+import App from "./App";
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-// reportWebVitals();
+const root = ReactDOM.createRoot(document.getElementById("root"));
 
-const jsxElement = <h1>This is a JSX element</h1>;
-const rootElement = document.getElementById("root");
-
-ReactDOM.render(jsxElement, rootElement);
+root.render(
+  <ThemeProvider theme={theme}>
+    <App />
+  </ThemeProvider>
+);
