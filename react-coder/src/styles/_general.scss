@@ -1,8 +1,14 @@
 body {
+  // position: relative;
   margin: 0;
   font-family:'Ubuntu Mono';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: rgb(248, 248, 248);
-  height: 300vh;
+}
+.App,#root{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+ align-items: center;
 }
