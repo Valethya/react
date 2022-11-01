@@ -7,7 +7,7 @@ import ShoppingCart from '@material-ui/icons/ShoppingCart';
 
 function CartWidget() {
   return (
-      <ShoppingCart htmlColor="#b388ff"/>
+      <ShoppingCart/>
   );
 }
 

@@ -7,7 +7,7 @@ const pages = ["Products", "Pricing", "Blog"];
 function NavBar(props) {
   return (
     <nav>
-      <h1 className="logo">Omori</h1>
+      <h1 className="logo">Omori Store</h1>
       <ul>
         {pages.map((page) => (
           <li>
