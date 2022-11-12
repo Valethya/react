@@ -1,0 +1,18 @@
+.addWish{
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    cursor: pointer;
+    svg{
+        padding: 1em;
+    }
+    &:hover{
+        color: #f76bba;
+        transition: 0.25s;
+        text-decoration: underline;
+        svg{
+            color: #f76bba;
+        }
+    }
+}

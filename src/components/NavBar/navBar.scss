@@ -30,10 +30,14 @@ nav{
         .hamburger-menu{
            display: none;
         }
+        a{
+            text-decoration: none;
+            color:#000;
+        }
         .logo{
             margin:0.5em;
             margin-left: 1em;
-    
+            text-decoration: none;
         }
         ul{
             width: 60%;
@@ -52,8 +56,6 @@ nav{
                     justify-content: center;
                     width: 100%;
                     height: 100%;
-                    text-decoration: none;
-                    color:#000;
                     transition: 2s;
                     &:hover{
                         background: #74fdbb;

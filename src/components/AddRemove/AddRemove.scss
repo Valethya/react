@@ -1,0 +1,15 @@
+.AddRemove{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    input{
+        border: none;
+        width: 6em;
+        text-align: center;
+    }
+    .AddRemove-btn{
+        background: #f5cee4;
+        // background: #f76bba;
+        cursor:pointer
+    }
+}

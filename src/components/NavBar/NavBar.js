@@ -1,26 +1,32 @@
 import React from "react";
 import CartWidget from "./CartWidget";
 import Badge from "../Badge/Badge";
-import { Menu } from "@material-ui/icons";
+import { Category, Menu } from "@material-ui/icons";
+import { Link } from "react-router-dom";
 
-const pages = ["Products", "Pricing", "Blog"];
+// const pages = ["Plush", "Poleras", "Blog"];
 
-function NavBar(props) {
+function NavBar() {
   return (
     <nav>
       <Menu className="hamburger-menu" />
-      <h1 className="logo">Omori Store</h1>
+      <Link to="react">
+        <h1 className="logo">Omori Store</h1>
+      </Link>
+
       <ul>
-        {pages.map((page) => (
-          <li>
-            <a href="#">{page}</a>
-          </li>
-        ))}
         <li>
-          <a href="#">
+          <Link to="/category/plush">Plush</Link>
+        </li>
+        <li>
+          <Link to="/category/poleras">poleras</Link>
+        </li>
+
+        <li>
+          <Link to="#">
             <CartWidget />
             <Badge />
-          </a>
+          </Link>
         </li>
       </ul>
     </nav>

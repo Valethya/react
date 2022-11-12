@@ -1,0 +1,62 @@
+[
+    {
+        "title":"OMORI plush",
+        "price":"28.000",
+        "img":"./images/omori-plush.jpg",
+        "description":"",
+        "category":"",
+        "id":1,
+        "stock":1,
+        "sale":"false"
+    },
+    {
+        "title":"AUBREY plush",
+        "price":"",
+        "img":"./images/aubrey-plush.jpg",
+        "description":"",
+        "category":"",
+        "id":1,
+        "stock":1,
+        "sale":"false"
+    },
+    {
+        "title":"BASIL plush",
+        "price":"",
+        "img":"./images/basil-plush.jpg",
+        "description":"",
+        "category":"",
+        "id":1,
+        "stock":1,
+        "sale":"false"
+    },
+    {
+        "title":"KEL plush",
+        "price":"",
+        "img":"./images/kel-plush.jpg",
+        "description":"",
+        "category":"",
+        "id":1,
+        "stock":1,
+        "sale":"false"
+    },
+    {
+        "title":"MARI plush",
+        "price":"",
+        "img":"./images/mari-plush.jpg",
+        "description":"",
+        "category":"",
+        "id":1,
+        "stock":1,
+        "sale":"false"
+    },
+    {
+        "title":"HERO plush",
+        "price":"",
+        "img":"./images/hero-plush.jpg",
+        "description":"",
+        "category":"",
+        "id":1,
+        "stock":1,
+        "sale":"false"
+    }
+]

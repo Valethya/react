@@ -1,9 +1,10 @@
 .btn{
     width: 100%;
-    background: #000;
+    background: rgb(139, 138, 138);
     color: #fff;
     height: 3em;
     transition: .25s;
+    cursor: pointer;
     &:hover{
         transition: .25s;
     }

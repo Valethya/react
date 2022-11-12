@@ -7,8 +7,16 @@
     .card-detail{
         height: 123px;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        flex-wrap: wrap;
         justify-content: space-between;
+        align-items: center;
+        h3{
+            width: 100%;
+        }
+        p{
+            width: 50%;
+        }
     }
     div{
         padding: .5em;
