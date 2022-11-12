@@ -1,14 +1,23 @@
 {
   "files": {
-    "main.css": "/react/static/css/main.3cc014cf.css",
-    "main.js": "/react/static/js/main.958c9d46.js",
+    "main.css": "/react/static/css/main.09234972.css",
+    "main.js": "/react/static/js/main.688f6b4a.js",
     "static/media/header.jpg": "/react/static/media/header.931425b0f7b4209edb1b.jpg",
+    "static/media/emotions-front.jpg": "/react/static/media/emotions-front.080604ac60ed6c9f6bc5.jpg",
+    "static/media/pluto-front.jpg": "/react/static/media/pluto-front.8b40f42e3212dac6117f.jpg",
+    "static/media/otherworld-front.jpg": "/react/static/media/otherworld-front.f3a7f1c9fec178825962.jpg",
+    "static/media/mari-plush.jpg": "/react/static/media/mari-plush.a4a67a8340dc453231de.jpg",
+    "static/media/hero-plush.jpg": "/react/static/media/hero-plush.f26672e3c74e875587b5.jpg",
+    "static/media/basil-plush.jpg": "/react/static/media/basil-plush.d00477d1701170ae07e8.jpg",
+    "static/media/kel-plush.jpg": "/react/static/media/kel-plush.1bc18f83385fdf2e8dba.jpg",
+    "static/media/aubrey-plush.jpg": "/react/static/media/aubrey-plush.6faf76976a056a403c09.jpg",
+    "static/media/omori-plush.jpg": "/react/static/media/omori-plush.00413d45258e90737132.jpg",
     "index.html": "/react/index.html",
-    "main.3cc014cf.css.map": "/react/static/css/main.3cc014cf.css.map",
-    "main.958c9d46.js.map": "/react/static/js/main.958c9d46.js.map"
+    "main.09234972.css.map": "/react/static/css/main.09234972.css.map",
+    "main.688f6b4a.js.map": "/react/static/js/main.688f6b4a.js.map"
   },
   "entrypoints": [
-    "static/css/main.3cc014cf.css",
-    "static/js/main.958c9d46.js"
+    "static/css/main.09234972.css",
+    "static/js/main.688f6b4a.js"
   ]
 }
