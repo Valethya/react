@@ -10,7 +10,7 @@ function NavBar() {
   return (
     <nav>
       <Menu className="hamburger-menu" />
-      <Link to="react">
+      <Link to="/">
         <h1 className="logo">Omori Store</h1>
       </Link>
 

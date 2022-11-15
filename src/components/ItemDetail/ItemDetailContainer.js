@@ -8,10 +8,8 @@ function ItemDetailContainer() {
   const [prod, setProd] = useState([]);
 
   const { id } = useParams();
-  //   console.log(id);
 
   async function getItemsAsync() {
-    debugger;
     let respuesta = await getSingleItem(id);
     setProd(respuesta);
   }
@@ -20,6 +18,10 @@ function ItemDetailContainer() {
     getItemsAsync();
   }, []);
 
-  return <ItemDetail product={prod} />;
+  return (
+    <>
+      <ItemDetail product={prod} />
+    </>
+  );
 }
 export default ItemDetailContainer;

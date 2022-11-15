@@ -28,7 +28,7 @@ const products = [
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate. ",
     category: "plush",
     id: 2,
-    stock: 1,
+    stock: 3,
     sale: "false",
   },
   {
@@ -39,7 +39,7 @@ const products = [
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate. ",
     category: "plush",
     id: 3,
-    stock: 1,
+    stock: 7,
     sale: "false",
   },
   {
@@ -50,7 +50,7 @@ const products = [
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate. ",
     category: "plush",
     id: 4,
-    stock: 1,
+    stock: 13,
     sale: "false",
   },
   {
@@ -61,7 +61,7 @@ const products = [
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate. ",
     category: "plush",
     id: 5,
-    stock: 1,
+    stock: 4,
     sale: "false",
   },
   {
@@ -72,7 +72,7 @@ const products = [
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate. ",
     category: "plush",
     id: 6,
-    stock: 1,
+    stock: 10,
     sale: "false",
   },
   {
@@ -83,7 +83,7 @@ const products = [
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate. ",
     category: "poleras",
     id: 7,
-    stock: 1,
+    stock: 21,
     sale: "false",
   },
   {
@@ -94,7 +94,7 @@ const products = [
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate. ",
     category: "poleras",
     id: 8,
-    stock: 1,
+    stock: 14,
     sale: "false",
   },
   {
@@ -105,7 +105,7 @@ const products = [
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate. ",
     category: "poleras",
     id: 9,
-    stock: 1,
+    stock: 16,
     sale: "false",
   },
 ];
