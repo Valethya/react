@@ -14,6 +14,7 @@ function App() {
       <Header />
       <NavBar />
       <Routes>
+        <Route path="react" element={<ItemListContainer />}></Route>
         <Route path="/" element={<ItemListContainer />}></Route>
         <Route
           path="category/:category"
@@ -21,12 +22,6 @@ function App() {
         ></Route>
         <Route path="/detail/:id" element={<ItemDetailContainer />}></Route>
       </Routes>
-      {/* <div className="App">
-        <Header />
-        <NavBar></NavBar>
-        <ItemListContainer />
-        <ItemDetail />
-      </div> */}
     </Router>
   );
 }
