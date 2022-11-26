@@ -1,10 +1,11 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Delete, SettingsApplicationsRounded } from "@material-ui/icons";
 import { cartContext } from "../../context/cartContext";
 import AddRemove from "../AddRemove/AddRemove";
 
 function ItemCartSide({ item }) {
-  const { removeItemCartSide, setCart, cart } = useContext(cartContext);
+  const { removeItemCartSide, setCart, cart, formatPrice } =
+    useContext(cartContext);
 
   let stock = item.stock;
   let newCart = [...cart];
@@ -13,7 +14,7 @@ function ItemCartSide({ item }) {
 
   let itemCart = cart.findIndex((item) => item.id == idItem);
 
-  let [count, setCount] = React.useState(cart[itemCart].count);
+  let [count, setCount] = useState(cart[itemCart].count);
 
   function handleAdd() {
     if (count < stock) newCart[itemCart].count += 1;
@@ -42,7 +43,7 @@ function ItemCartSide({ item }) {
           handleAdd={handleAdd}
           handleRemove={handleRemove}
         />
-        <p>valor unidad:{item.price}</p>
+        <p>total item:{formatPrice(item.price * item.count)}</p>
       </div>
     </li>
   );

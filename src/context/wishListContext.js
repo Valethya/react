@@ -15,10 +15,9 @@ export function WishListContextProvider({ children }) {
       product.wishList = true;
       newWishList.push(product);
       setWishList(newWishList);
-      console.log(wishList);
     }
   }
-  function inWishList(wishList) {}
+
   return (
     <wishListContext.Provider value={{ wishList, addWishList }}>
       {children}

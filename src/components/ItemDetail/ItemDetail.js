@@ -5,13 +5,6 @@ import Wish from "../wish/wish";
 import { cartContext } from "../../context/cartContext";
 
 function ItemDetail({ product }) {
-  const formatPrice = (price) => {
-    return new Intl.NumberFormat("es-CL", {
-      style: "currency",
-      currency: "CLP",
-    }).format(price);
-  };
-
   let [count, setCount] = React.useState(1);
   let stock = product.stock;
 
@@ -25,7 +18,7 @@ function ItemDetail({ product }) {
     if (count > 0) setCount(count - 1);
   }
 
-  const { addToCart } = useContext(cartContext);
+  const { addToCart, formatPrice } = useContext(cartContext);
 
   function handleAddToCart() {
     console.log("funciona");

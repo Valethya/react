@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import Button from "../Buttons/Button";
 import { FavoriteBorderOutlined } from "@material-ui/icons";
 import { Favorite } from "@material-ui/icons";
@@ -8,15 +8,17 @@ import { wishListContext } from "../../context/wishListContext";
 function ItemList({ title, imgurl, price, id }) {
   const { wishList } = useContext(wishListContext);
 
-  let [icon, setIcon] = useState(
-    <FavoriteBorderOutlined id={id} style={{ color: "#000" }} />
-  );
+  let favorite = wishList.find((item) => item.id == id);
 
-  let fav = wishList.find((item) => item.id == id);
+  let [fav, setFav] = useState(false);
 
-  if (fav?.wishList === "true") {
-    setIcon(<Favorite id={id} style={{ color: "#f76bba" }} />);
-  }
+  useEffect(() => {
+    if (favorite?.wishList === true) {
+      debugger;
+      setFav(true);
+    }
+  }, [favorite]);
+
   const urlDetail = `/detail/${id}`;
 
   return (
@@ -28,7 +30,11 @@ function ItemList({ title, imgurl, price, id }) {
         <div className="card-detail">
           <h3>{title}</h3>
           <p>{price}</p>
-          {icon}
+          {fav ? (
+            <Favorite id={id} style={{ color: "#f76bba" }} />
+          ) : (
+            <FavoriteBorderOutlined id={id} style={{ color: "#000" }} />
+          )}
         </div>
         <Link to={urlDetail}>
           <Button>Ver más</Button>

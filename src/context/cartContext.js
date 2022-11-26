@@ -12,6 +12,13 @@ export function CartContextProvider({ children }) {
 
   const [message, setMessage] = useState("");
 
+  const formatPrice = (price) => {
+    return new Intl.NumberFormat("es-CL", {
+      style: "currency",
+      currency: "CLP",
+    }).format(price);
+  };
+
   function addToCart(product, count) {
     let itemAlreadyInCart = cart.findIndex(
       (itemInCart) => itemInCart.id === product.id
@@ -53,7 +60,7 @@ export function CartContextProvider({ children }) {
 
   /// CARTSIDE
 
-  const [display, setDisplay] = useState("flex");
+  const [display, setDisplay] = useState("none");
 
   function removeItemCartSide(item) {
     let idItem = item.id;
@@ -62,17 +69,22 @@ export function CartContextProvider({ children }) {
     setCart(newCart);
   }
 
-  //   function clear() {
-  //     /* vaciar el estado */
-  //   }
+  function clear() {
+    setCart([]);
+    setDisplay("none");
+  }
 
   //   function removeItem(idRevove) {
   //     /* cart.filter -> Filtrar todos los items con un ID diferente a "idRemove"   */
   //   }
 
-  //   function priceInCart() {
-  //     /* calcular el costo total de la compra */
-  //   }
+  function priceInCart() {
+    const finalPrice = cart.reduce(
+      (acc, item) => acc + item.price * item.count,
+      0
+    );
+    return formatPrice(finalPrice);
+  }
 
   //   function alreadyInCart(id) {
   //     /* return true/false */
@@ -99,6 +111,9 @@ export function CartContextProvider({ children }) {
         message,
         removeItemCartSide,
         setCart,
+        priceInCart,
+        formatPrice,
+        clear,
       }}
     >
       {children}
