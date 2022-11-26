@@ -1,8 +1,11 @@
-import React from "react";
+import React ,{useContext} from "react";
+import { cartContext} from "../../context/cartContext";
 
-function Badge(props) {
+
+function Badge() {
+    const miContext = useContext(cartContext);
     return <sup>
-        0
+ {miContext.itemsInCart()}
     </sup>
 }
 

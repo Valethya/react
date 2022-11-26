@@ -1,7 +1,11 @@
 .AddRemove{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     width: 100%;
+    div{
+        display: flex;
+        flex-direction: row;
+    }
     input{
         border: none;
         width: 6em;

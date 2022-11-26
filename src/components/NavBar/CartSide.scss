@@ -1,0 +1,60 @@
+.CartSide{
+    width: 25vw;
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    z-index: 1000;
+    height: 100vh;
+    background: #fff;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 24px 38px 3px rgb(0 0 0 / 14%), 0 9px 46px 8px rgb(0 0 0 / 12%), 0 11px 15px -7px rgb(0 0 0 / 20%);
+    scroll
+    svg{
+        padding: 0.5em;
+    }
+    .listItemCartSide{
+        padding: 0;
+        overflow-y: auto;
+        max-height: 95%;
+        // height: 100%;
+        
+        .itemCartSide{
+            position: relative;
+            padding: 1em;
+            display: flex;
+            flex-direction:row;
+            flex-wrap: wrap;
+            border:1px solid #e0e0e0; ;
+    
+            .detail{
+              
+                display: flex;
+                flex-direction: column;
+                align-content: center;
+                justify-content: center;
+                margin-left: .5em;
+                p{
+                    margin: 0;
+                }
+                h3{
+                    color:#fe019a;
+                }
+                .deleteItemCartSide{
+                    position: absolute;
+                    bottom:1em;
+                    right: .5em;
+                }
+                p{
+                    margin-top: .5em;
+                }
+    
+            }
+            img{
+                width: 30%;
+                object-fit: cover;
+            }
+        }
+    } 
+ 
+}

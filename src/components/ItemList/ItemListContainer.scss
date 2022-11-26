@@ -1,5 +1,5 @@
 .item-list{
-    width: 70%;
+    width: 90%;
     margin-top: 3em;
     padding: 1em;
     display: flex;
@@ -9,5 +9,10 @@
     h2{
         width: 100%;
         text-align: center;
+    }
+}
+@media #{$medium-and-up}{
+    .item-list{
+        width: 70%;
     }
 }

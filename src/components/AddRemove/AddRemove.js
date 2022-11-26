@@ -1,22 +1,20 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Add, Remove } from "@material-ui/icons";
-import Icon from "@mui/material/Icon";
+import Button from "../Buttons/Button";
+import { cartContext } from "../../context/cartContext";
 
-function AddRemove(props) {
-  let [count, setCount] = React.useState(1);
-
-  function handleAdd() {
-    if (count < props.stock) setCount(count + 1);
-  }
-  function handleRemove() {
-    if (count > 0) setCount(count - 1);
-  }
+function AddRemove({ handleAdd, handleRemove, count }) {
+  const { message } = useContext(cartContext);
 
   return (
     <div className="AddRemove">
-      <Remove className="AddRemove-btn" onClick={handleRemove} />
-      <input type="text" value={count}></input>
-      <Add className="AddRemove-btn" onClick={handleAdd} />
+      <div>
+        <Remove className="AddRemove-btn" onClick={handleRemove} />
+        <input type="text" value={count}></input>
+
+        <Add className="AddRemove-btn" onClick={handleAdd} />
+      </div>
+      <p>{message}</p>
     </div>
   );
 }

@@ -1,24 +1,42 @@
 .card{
-    width: calc(100% / 4);
+    width: calc(100% / 3);
     img{
         width: 100%;
         object-fit: cover;
     }
     .card-detail{
-        height: 123px;
+        height: 160px;
         display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
+        flex-direction: column;
         justify-content: space-between;
-        align-items: center;
+        align-items:flex-start;
         h3{
             width: 100%;
+            height: 90px;
         }
         p{
-            width: 50%;
+            width: 100%;
         }
     }
     div{
-        padding: .5em;
+    padding: 3px;
+    }
+}
+
+@media #{$medium-and-up}{
+    .card{
+        width: calc(100% / 4);
+        .card-detail{
+            height: 123px;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+            h3{
+                height: 0;
+            }
+        }
+        div{
+            padding: .5em;
+        }
     }
 }

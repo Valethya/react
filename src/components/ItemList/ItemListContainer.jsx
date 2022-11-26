@@ -28,7 +28,6 @@ function ItemListContainer() {
       {products.map((prod) => {
         return (<ItemList
           key={prod.id}
-          favorite={prod.favorite}
           id={prod.id}
           title={prod.title}
           imgurl={prod.img}

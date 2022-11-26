@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import CartWidget from "./CartWidget";
 import Badge from "../Badge/Badge";
-import { Category, Menu } from "@material-ui/icons";
+import { Menu } from "@material-ui/icons";
 import { Link } from "react-router-dom";
+import { cartContext } from "../../context/cartContext";
 
 // const pages = ["Plush", "Poleras", "Blog"];
 
@@ -25,7 +26,7 @@ function NavBar() {
         <li>
           <Link to="#">
             <CartWidget />
-            <Badge />
+            <Badge></Badge>
           </Link>
         </li>
       </ul>

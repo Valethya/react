@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useContext } from "react";
 import Button from "../Buttons/Button";
 import AddRemove from "../AddRemove/AddRemove";
 import Wish from "../wish/wish";
+import { cartContext } from "../../context/cartContext";
 
 function ItemDetail({ product }) {
   const formatPrice = (price) => {
@@ -11,6 +12,26 @@ function ItemDetail({ product }) {
     }).format(price);
   };
 
+  let [count, setCount] = React.useState(1);
+  let stock = product.stock;
+
+  function handleAdd() {
+    debugger;
+    console.log(count);
+    if (count < stock) setCount(count + 1);
+  }
+  function handleRemove() {
+    console.log("resta");
+    if (count > 0) setCount(count - 1);
+  }
+
+  const { addToCart } = useContext(cartContext);
+
+  function handleAddToCart() {
+    console.log("funciona");
+    addToCart(product, count);
+  }
+
   return (
     <div className="itemDetail">
       <img src={product.img} />
@@ -18,9 +39,13 @@ function ItemDetail({ product }) {
         <h2>{product.title}</h2>
         <p>{product.description}</p>
         <p>{formatPrice(product.price)}</p>
-        <Wish id={product.id} fav={product.favorite}></Wish>
-        <AddRemove stock={product.stock} />
-        <Button>Agregar al carro</Button>
+        <Wish product={product}></Wish>
+        <AddRemove
+          handleAdd={handleAdd}
+          handleRemove={handleRemove}
+          count={count}
+        />
+        <Button onTouchButton={handleAddToCart}>Agregar al carrito</Button>
       </div>
     </div>
   );
