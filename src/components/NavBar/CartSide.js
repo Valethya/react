@@ -1,7 +1,8 @@
 import React, { useContext, useState } from "react";
 import { cartContext } from "../../context/cartContext";
-import { Close, RemoveShoppingCart } from "@material-ui/icons";
+import { Close, RemoveShoppingCart, ArrowBack } from "@material-ui/icons";
 import ItemCartSide from "./ItemCartSide";
+import { Link } from "react-router-dom";
 
 function CartSide() {
   const { cart, display, setDisplay, priceInCart, clear } =
@@ -15,14 +16,19 @@ function CartSide() {
   if (cart.length > 0) {
     return (
       <div className="CartSide" style={{ display: display }}>
-        <Close style={{ padding: ".5em" }} onClick={hiddenCartSide}></Close>
+        <div className="goRemove">
+          <Link to="/cart" className="">
+            <ArrowBack></ArrowBack>Ir al detalle
+          </Link>
+          <Close style={{ padding: ".5em" }} onClick={hiddenCartSide}></Close>
+        </div>
 
         <ul className="listItemCartSide">
           {cart.map((item) => {
             return <ItemCartSide item={item} cart={cart} />;
           })}
           <li className="total">
-            Total: {priceInCart()}{" "}
+            <b>Total:</b> {priceInCart()}{" "}
             <RemoveShoppingCart
               style={{ padding: ".5em" }}
               onClick={clear}

@@ -14,7 +14,7 @@ function getItems(categoryId) {
         );
 
         resolve(itemRequested);
-      }, 2000);
+      });
     }
   });
 }

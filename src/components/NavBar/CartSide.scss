@@ -9,16 +9,30 @@
     flex-direction: column;
     justify-content: space-between;
     box-shadow: 0 24px 38px 3px rgb(0 0 0 / 14%), 0 9px 46px 8px rgb(0 0 0 / 12%), 0 11px 15px -7px rgb(0 0 0 / 20%);
-    scroll
-    svg{
-        padding: 0.5em;
+    
+    .goRemove{
+        display:flex;
+        justify-content: space-between;
+        box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 12%), 0 1px 5px 0 rgb(0 0 0 / 20%);
+        z-index: 1000;
+        a{
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color:#fe019a;
+        }
+        svg{
+            padding: 0.5em;
+        }
     }
+ 
     .listItemCartSide{
         padding: 0;
         overflow-y: auto;
         max-height: 95%;
         padding-bottom: 10vh;
         margin-block-end: 0;
+        margin-block-start: 0;
         // height: 100%;
         .total{
             height: 10vh;
@@ -29,6 +43,7 @@
             display: flex;
             justify-content: space-around;
             align-items: center;
+            box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 12%), 0 1px 5px 0 rgb(0 0 0 / 20%);
         }
         
         .itemCartSide{

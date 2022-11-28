@@ -1,0 +1,42 @@
+.cart{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 80%;
+    margin-top: 3em;
+    justify-content: space-between;
+    h1{
+        width: 100%;
+    }
+    .cartDetail{
+        width: 40%;
+   
+    }
+    
+    .itemCart{
+        display: flex;
+        flex-direction: row;
+        padding: .5em;
+        justify-content: center;
+        border-bottom: 1px solid #000;
+        border-top:1px solid #000; ;
+        div{
+            padding: 1em;
+            width: 40%;
+        }
+        img{
+            width: 10vw;
+            object-fit: cover;
+        }
+     
+    }
+    .detailItemPay{
+        padding: 2em;
+        width: 40%;
+        background-color:#b388ff;
+        h2{
+            color: #fff;
+        }
+    }
+}
+

@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import { Delete, SettingsApplicationsRounded } from "@material-ui/icons";
+import { Delete } from "@material-ui/icons";
 import { cartContext } from "../../context/cartContext";
 import AddRemove from "../AddRemove/AddRemove";
 
@@ -24,14 +24,20 @@ function ItemCartSide({ item }) {
   }
   function handleRemove() {
     if (count > 0) newCart[itemCart].count -= 1;
-    setCart(newCart);
-    setCount(newCart[itemCart].count);
+    debugger;
+    if (newCart[itemCart].count == 0) {
+      removeItemCartSide(item);
+      setCount(newCart[itemCart].count);
+    } else {
+      setCart(newCart);
+      setCount(newCart[itemCart].count);
+    }
   }
 
   function removeItem() {
     removeItemCartSide(item);
   }
-
+  debugger;
   return (
     <li className="itemCartSide">
       <img src={item.img} alt={item.title} />
@@ -43,7 +49,9 @@ function ItemCartSide({ item }) {
           handleAdd={handleAdd}
           handleRemove={handleRemove}
         />
-        <p>total item:{formatPrice(item.price * item.count)}</p>
+        <p>
+          <b>total item</b>:{formatPrice(item.price * item.count)}
+        </p>
       </div>
     </li>
   );
