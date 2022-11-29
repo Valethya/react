@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/react/static/css/main.05a40c90.css",
-    "main.js": "/react/static/js/main.29ad5ccc.js",
+    "main.css": "/react/static/css/main.2b1c533b.css",
+    "main.js": "/react/static/js/main.75889c34.js",
     "static/media/header.jpg": "/react/static/media/header.931425b0f7b4209edb1b.jpg",
     "static/media/emotions-front.jpg": "/react/static/media/emotions-front.080604ac60ed6c9f6bc5.jpg",
     "static/media/pluto-front.jpg": "/react/static/media/pluto-front.8b40f42e3212dac6117f.jpg",
@@ -12,12 +12,14 @@
     "static/media/kel-plush.jpg": "/react/static/media/kel-plush.1bc18f83385fdf2e8dba.jpg",
     "static/media/aubrey-plush.jpg": "/react/static/media/aubrey-plush.6faf76976a056a403c09.jpg",
     "static/media/omori-plush.jpg": "/react/static/media/omori-plush.00413d45258e90737132.jpg",
+    "static/media/mewo.svg": "/react/static/media/mewo.6ebf75680c5b8718b4dcc341e1b8822f.svg",
     "index.html": "/react/index.html",
-    "main.05a40c90.css.map": "/react/static/css/main.05a40c90.css.map",
-    "main.29ad5ccc.js.map": "/react/static/js/main.29ad5ccc.js.map"
+    "static/media/Z.svg": "/react/static/media/Z.2b37bac139ce1792d2647924bef1a479.svg",
+    "main.2b1c533b.css.map": "/react/static/css/main.2b1c533b.css.map",
+    "main.75889c34.js.map": "/react/static/js/main.75889c34.js.map"
   },
   "entrypoints": [
-    "static/css/main.05a40c90.css",
-    "static/js/main.29ad5ccc.js"
+    "static/css/main.2b1c533b.css",
+    "static/js/main.75889c34.js"
   ]
 }
