@@ -1,5 +1,5 @@
 .CartSide{
-    width: 25vw;
+    width: 80vw;
     position: fixed;
     bottom: 0px;
     right: 0px;
@@ -39,7 +39,7 @@
             position: fixed;
             bottom: 0;
             background-color: #e0e0e0;
-            width: 25vw;
+            width: 80vw;
             display: flex;
             justify-content: space-around;
             align-items: center;
@@ -69,7 +69,7 @@
                 }
                 .deleteItemCartSide{
                     position: absolute;
-                    bottom:1em;
+                    bottom:10%;
                     right: .5em;
                 }
                 p{
@@ -84,4 +84,23 @@
         }
     } 
  
+}
+
+@media #{$medium-and-up}{
+    .CartSide{
+        width: 25vw;
+        .listItemCartSide{
+            .total{
+                width: 25vw;
+            }
+            
+            .itemCartSide{
+                .detail{
+                    .deleteItemCartSide{
+                        bottom:1em;
+                    }
+                }
+            }
+        } 
+    }
 }

@@ -9,7 +9,7 @@ import Loader from "../Loader/Loader";
 
 function ItemListContainer() {
 
-  const [products, setProducts] = useState([]);
+  const [products, setProducts] = useState(null);
   const { category } = useParams();
 
   async function getItemsAsync() {
@@ -21,10 +21,10 @@ function ItemListContainer() {
     getItemsAsync();
   }, [category]);
   return (
-    <div className="item-list">
-     {products.map((prod) => {
-        return (<ItemList product={prod} /> );
-      })}
+    <div className="itemListContainer">
+     {products?
+         <ItemList products={products} />:<Loader/>
+      }
  
       </div>
       

@@ -1,18 +1,25 @@
-.item-list{
+.itemListContainer{
     width: 90%;
     margin-top: 3em;
-    padding: 1em;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    box-sizing: border-box;
-    h2{
+   
+    .item-list{
         width: 100%;
-        text-align: center;
+        padding: 1em;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        box-sizing: border-box;
+        h2{
+            width: 100%;
+            text-align: center;
+        }
     }
+   
 }
 @media #{$medium-and-up}{
-    .item-list{
+    .itemListContainer{
         width: 70%;
+       
     }
+
 }

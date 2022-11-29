@@ -30,6 +30,10 @@ function NavBar() {
           </Link>
         </li>
       </ul>
+      <Link to="#" className="cartWidget">
+        <CartWidget />
+        <Badge></Badge>
+      </Link>
     </nav>
   );
 }
