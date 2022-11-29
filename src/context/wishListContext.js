@@ -18,8 +18,15 @@ export function WishListContextProvider({ children }) {
     }
   }
 
+  function removeWishList(item) {
+    let idItem = item.id;
+
+    let newWishList = wishList.filter((item) => item.id !== idItem);
+    setWishList(newWishList);
+  }
+
   return (
-    <wishListContext.Provider value={{ wishList, addWishList }}>
+    <wishListContext.Provider value={{ wishList, addWishList, removeWishList }}>
       {children}
     </wishListContext.Provider>
   );

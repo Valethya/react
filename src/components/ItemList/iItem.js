@@ -7,7 +7,7 @@ import { wishListContext } from "../../context/wishListContext";
 import { cartContext } from "../../context/cartContext";
 
 function Item({ product }) {
-  const { wishList } = useContext(wishListContext);
+  const { wishList, addWishList, removeWishList } = useContext(wishListContext);
   const { addToCart, formatPrice } = useContext(cartContext);
 
   let favorite = wishList.find((item) => item.id == product.id);
@@ -26,6 +26,23 @@ function Item({ product }) {
     debugger;
     addToCart(product, count);
   }
+
+  function handleWish() {
+    debugger;
+    let item = wishList.find((item) => item.id == product.id);
+    console.log("hola", item);
+    if (item == undefined) {
+      addWishList(product);
+      setFav(true);
+      // console.log("funcion agregar", wishList);
+    } else {
+      removeWishList(product);
+      // console.log("funciona remover wish", wishList);
+      setFav(false);
+    }
+    console.log("por aqui", wishList);
+  }
+
   const urlDetail = `/detail/${product.id}`;
   return (
     <div className="card">
@@ -38,9 +55,14 @@ function Item({ product }) {
           <p>{formatPrice(product.price)}</p>
           <div className="favAdd">
             {fav ? (
-              <Favorite id={product.id} style={{ color: "#f76bba" }} />
+              <Favorite
+                id={product.id}
+                onClick={handleWish}
+                style={{ color: "#f76bba" }}
+              />
             ) : (
               <FavoriteBorderOutlined
+                onClick={handleWish}
                 id={product.id}
                 style={{ color: "#000" }}
               />
