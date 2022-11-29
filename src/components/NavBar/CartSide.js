@@ -17,7 +17,13 @@ function CartSide() {
     return (
       <div className="CartSide" style={{ display: display }}>
         <div className="goRemove">
-          <Link to="/cart" className="">
+          <Link
+            to="/cart"
+            onClick={() => {
+              setDisplay("none");
+            }}
+            className=""
+          >
             <ArrowBack></ArrowBack>Ir al detalle
           </Link>
           <Close style={{ padding: ".5em" }} onClick={hiddenCartSide}></Close>

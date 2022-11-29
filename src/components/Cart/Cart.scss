@@ -10,7 +10,10 @@
     }
     .cartDetail{
         width: 40%;
-   
+        margin-block-end: 3em;
+        b{
+            color: #fe019a;
+        }
     }
     
     .itemCart{
@@ -34,9 +37,11 @@
         padding: 2em;
         width: 40%;
         background-color:#b388ff;
+        margin-block-end: 3em;
         h2{
             color: #fff;
         }
+    
     }
 }
 

@@ -18,7 +18,8 @@ function ItemCart(item) {
           <b>valor unidad:</b> {item.item.price}
         </p>
         <p>
-          <b>precio total item:</b> {formatPrice(item.item.price)}
+          <b>precio total item:</b>{" "}
+          {formatPrice(item.item.price * item.item.count)}
         </p>
       </div>
     </div>

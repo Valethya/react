@@ -38,7 +38,7 @@ function ItemDetail({ product }) {
           handleRemove={handleRemove}
           count={count}
         />
-        <Button onTouchButton={handleAddToCart}>Agregar al carrito</Button>
+        <Button oneTouchButton={handleAddToCart}>Agregar al carrito</Button>
       </div>
     </div>
   );

@@ -54,7 +54,7 @@ export function CartContextProvider({ children }) {
   let total = 0;
   function itemsInCart() {
     let total = 0;
-    cart.forEach((itemInCart) => (total = total + itemInCart.count));
+    cart.forEach((item) => (total = total + item.count));
     return total;
   }
 

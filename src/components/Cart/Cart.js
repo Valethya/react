@@ -16,7 +16,7 @@ function Cart() {
       </div>
 
       <div className="detailItemPay">
-        <h2>Metodo de pago</h2>
+        <h2>Resumen de Compra</h2>
         <p>
           <b>Total:</b> {priceInCart()}
         </p>

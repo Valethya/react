@@ -1,16 +1,19 @@
 import React, { useContext, useEffect, useState } from "react";
 import Button from "../Buttons/Button";
-import { FavoriteBorderOutlined } from "@material-ui/icons";
+import { FavoriteBorderOutlined, Add } from "@material-ui/icons";
 import { Favorite } from "@material-ui/icons";
 import { Link } from "react-router-dom";
 import { wishListContext } from "../../context/wishListContext";
+import { cartContext } from "../../context/cartContext";
 
-function ItemList({ title, imgurl, price, id }) {
+function ItemList({ product }) {
   const { wishList } = useContext(wishListContext);
+  const { addToCart, formatPrice } = useContext(cartContext);
 
-  let favorite = wishList.find((item) => item.id == id);
+  let favorite = wishList.find((item) => item.id == product.id);
 
   let [fav, setFav] = useState(false);
+  let [count, setCount] = useState(1);
 
   useEffect(() => {
     if (favorite?.wishList === true) {
@@ -19,22 +22,28 @@ function ItemList({ title, imgurl, price, id }) {
     }
   }, [favorite]);
 
-  const urlDetail = `/detail/${id}`;
+  function handleAddToCart() {
+    debugger;
+    addToCart(product, count);
+  }
+
+  const urlDetail = `/detail/${product.id}`;
 
   return (
     <div className="card">
       <div>
         <div className="card-img">
-          <img src={imgurl} alt={title} />
+          <img src={product.img} alt={product.title} />
         </div>
         <div className="card-detail">
-          <h3>{title}</h3>
-          <p>{price}</p>
+          <h3>{product.title}</h3>
+          <p>{formatPrice(product.price)}</p>
           {fav ? (
-            <Favorite id={id} style={{ color: "#f76bba" }} />
+            <Favorite id={product.id} style={{ color: "#f76bba" }} />
           ) : (
-            <FavoriteBorderOutlined id={id} style={{ color: "#000" }} />
+            <FavoriteBorderOutlined id={product.id} style={{ color: "#000" }} />
           )}
+          <Add onClick={handleAddToCart} className="addItem"></Add>
         </div>
         <Link to={urlDetail}>
           <Button>Ver más</Button>

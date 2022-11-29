@@ -10,6 +10,7 @@ import { CartContextProvider } from "./context/cartContext";
 import { WishListContextProvider } from "./context/wishListContext";
 import CartSide from "./components/NavBar/CartSide";
 import Cart from "./components/Cart/Cart";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
             <Route path="/cart" element={<Cart />}></Route>
           </Routes>
         </WishListContextProvider>
+        <Footer></Footer>
         <CartSide></CartSide>
       </Router>
     </CartContextProvider>
