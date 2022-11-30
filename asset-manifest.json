@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/react/static/css/main.2b1c533b.css",
-    "main.js": "/react/static/js/main.6bfed2b3.js",
+    "main.css": "/react/static/css/main.fb768eef.css",
+    "main.js": "/react/static/js/main.236550b6.js",
     "static/media/header.jpg": "/react/static/media/header.931425b0f7b4209edb1b.jpg",
     "static/media/emotions-front.jpg": "/react/static/media/emotions-front.080604ac60ed6c9f6bc5.jpg",
     "static/media/pluto-front.jpg": "/react/static/media/pluto-front.8b40f42e3212dac6117f.jpg",
@@ -15,11 +15,11 @@
     "static/media/mewo.svg": "/react/static/media/mewo.6ebf75680c5b8718b4dcc341e1b8822f.svg",
     "index.html": "/react/index.html",
     "static/media/Z.svg": "/react/static/media/Z.2b37bac139ce1792d2647924bef1a479.svg",
-    "main.2b1c533b.css.map": "/react/static/css/main.2b1c533b.css.map",
-    "main.6bfed2b3.js.map": "/react/static/js/main.6bfed2b3.js.map"
+    "main.fb768eef.css.map": "/react/static/css/main.fb768eef.css.map",
+    "main.236550b6.js.map": "/react/static/js/main.236550b6.js.map"
   },
   "entrypoints": [
-    "static/css/main.2b1c533b.css",
-    "static/js/main.6bfed2b3.js"
+    "static/css/main.fb768eef.css",
+    "static/js/main.236550b6.js"
   ]
 }
