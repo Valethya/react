@@ -8,9 +8,10 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ItemDetailContainer from "./components/ItemDetail/ItemDetailContainer";
 import { CartContextProvider } from "./context/cartContext";
 import { WishListContextProvider } from "./context/wishListContext";
-import CartSide from "./components/NavBar/CartSide";
+import CartSide from "./components/Cart/CartSide";
 import Cart from "./components/Cart/Cart";
 import Footer from "./components/Footer/Footer";
+import Toastify from "./components/Toastify/Toastify";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
             <Route path="/cart" element={<Cart />}></Route>
           </Routes>
         </WishListContextProvider>
+        <Toastify />
         <Footer></Footer>
         <CartSide></CartSide>
       </Router>

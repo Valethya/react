@@ -74,16 +74,21 @@ export function CartContextProvider({ children }) {
     setDisplay("none");
   }
 
-  //   function removeItem(idRevove) {
-  //     /* cart.filter -> Filtrar todos los items con un ID diferente a "idRemove"   */
-  //   }
-
   function priceInCart() {
     const finalPrice = cart.reduce(
       (acc, item) => acc + item.price * item.count,
       0
     );
     return formatPrice(finalPrice);
+  }
+
+  ///Toastify
+  const [show, setShow] = useState("none");
+  function showToastify() {
+    setShow("flex");
+  }
+  function hiddenToastify() {
+    setShow("none");
   }
 
   //   function alreadyInCart(id) {
@@ -114,6 +119,9 @@ export function CartContextProvider({ children }) {
         priceInCart,
         formatPrice,
         clear,
+        show,
+        showToastify,
+        hiddenToastify,
       }}
     >
       {children}

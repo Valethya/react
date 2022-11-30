@@ -18,11 +18,12 @@ function ItemDetail({ product }) {
     if (count > 0) setCount(count - 1);
   }
 
-  const { addToCart, formatPrice } = useContext(cartContext);
+  const { addToCart, formatPrice, showToastify } = useContext(cartContext);
 
   function handleAddToCart() {
     console.log("funciona");
     addToCart(product, count);
+    showToastify();
   }
 
   return (

@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useState } from "react";
 import { Delete } from "@material-ui/icons";
 import { cartContext } from "../../context/cartContext";
 import AddRemove from "../AddRemove/AddRemove";
@@ -45,7 +45,7 @@ function ItemCartSide({ item }) {
         <h3>{item.title}</h3>
         <Delete className="deleteItemCartSide" onClick={removeItem} />
         <AddRemove
-          count={count}
+          count={cart[itemCart].count}
           handleAdd={handleAdd}
           handleRemove={handleRemove}
         />

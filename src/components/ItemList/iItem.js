@@ -8,7 +8,7 @@ import { cartContext } from "../../context/cartContext";
 
 function Item({ product }) {
   const { wishList, addWishList, removeWishList } = useContext(wishListContext);
-  const { addToCart, formatPrice } = useContext(cartContext);
+  const { addToCart, formatPrice, showToastify } = useContext(cartContext);
 
   let favorite = wishList.find((item) => item.id == product.id);
 
@@ -25,6 +25,7 @@ function Item({ product }) {
   function handleAddToCart() {
     debugger;
     addToCart(product, count);
+    showToastify();
   }
 
   function handleWish() {
@@ -34,13 +35,10 @@ function Item({ product }) {
     if (item == undefined) {
       addWishList(product);
       setFav(true);
-      // console.log("funcion agregar", wishList);
     } else {
       removeWishList(product);
-      // console.log("funciona remover wish", wishList);
       setFav(false);
     }
-    console.log("por aqui", wishList);
   }
 
   const urlDetail = `/detail/${product.id}`;
