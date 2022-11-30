@@ -16,4 +16,12 @@
         // background: #f76bba;
         cursor:pointer
     }
+    .add{
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+    }
+    .remove{
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+    }
 }

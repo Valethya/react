@@ -9,10 +9,10 @@ function AddRemove({ handleAdd, handleRemove, count }) {
   return (
     <div className="AddRemove">
       <div>
-        <Remove className="AddRemove-btn" onClick={handleRemove} />
+        <Remove className="AddRemove-btn remove" onClick={handleRemove} />
         <input type="text" value={count}></input>
 
-        <Add className="AddRemove-btn" onClick={handleAdd} />
+        <Add className="AddRemove-btn add" onClick={handleAdd} />
       </div>
       <p>{message}</p>
     </div>
