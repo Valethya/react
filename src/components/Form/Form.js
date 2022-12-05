@@ -32,6 +32,7 @@ export default function Form(props) {
         htmlfor="email"
         onChange={onInputChange}
       ></Input>
+
       <Input
         name="phone"
         type="phone"

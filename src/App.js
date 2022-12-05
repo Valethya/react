@@ -22,7 +22,6 @@ function App() {
         <NavBar />
         <WishListContextProvider>
           <Routes>
-            <Route path="react" element={<ItemListContainer />}></Route>
             <Route path="/" element={<ItemListContainer />}></Route>
             <Route
               path="category/:category"
