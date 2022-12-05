@@ -8,7 +8,8 @@ import { cartContext } from "../../context/cartContext";
 
 function Item({ product }) {
   const { wishList, addWishList, removeWishList } = useContext(wishListContext);
-  const { addToCart, formatPrice, showToastify } = useContext(cartContext);
+  const { addToCart, formatPrice, showToastify, hiddenToastify } =
+    useContext(cartContext);
 
   let favorite = wishList.find((item) => item.id === product.id);
 
@@ -24,6 +25,7 @@ function Item({ product }) {
   function handleAddToCart() {
     addToCart(product, count);
     showToastify();
+    setTimeout(hiddenToastify, 4000);
   }
 
   function handleWish() {

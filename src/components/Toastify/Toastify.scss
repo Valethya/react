@@ -9,7 +9,7 @@
     border-radius: 2px;
     position: fixed;
     bottom:0;
-    animation: toastifyCel 1s;
+    animation: toastifyCel 4s;
     box-shadow: 0px -3px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 12%), 0 1px 5px 0 rgb(0 0 0 / 20%);
     z-index: 2100;
 }
@@ -17,8 +17,14 @@
     0%{
         right: -100%;
     }
-    100%{
+    30%{
         right: 0;
+    }
+    70%{
+        right: 0;
+    }
+    100%{
+        right: -100%;
     }
 }
 
@@ -27,7 +33,7 @@
         width: 30%;
         bottom:6vh ;
         right: 6vh;
-        animation: toastify 1s;
+        animation: toastify 4s forwards;
         box-shadow: 5px 6px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 12%), 0 1px 5px 0 rgb(0 0 0 / 20%);
      
     }
@@ -36,7 +42,13 @@
     0%{
         bottom:-8vh;
     }
-    100%{
+    30%{
         bottom:6vh
+    }
+    70%{
+        bottom:6vh
+    }
+    100%{
+        bottom:-8vh;
     }
 }
