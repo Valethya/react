@@ -1,7 +1,7 @@
 import React from "react";
 import ItemDetail from "../ItemDetail/ItemDetail";
 import { useEffect, useState } from "react";
-import { getSingleItem } from "../../services/mockService";
+import { getSingleItem } from "../../services/firestore";
 import { useParams } from "react-router-dom";
 import Loader from "../Loader/Loader";
 

@@ -11,7 +11,7 @@ function ItemList({ products }) {
   return (
     <div className="item-list">
       {products.map((product) => {
-        return <Item product={product} />;
+        return <Item product={product} key={product.id} />;
       })}
     </div>
   );

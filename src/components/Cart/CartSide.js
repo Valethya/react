@@ -3,6 +3,7 @@ import { cartContext } from "../../context/cartContext";
 import { Close, RemoveShoppingCart, ArrowBack } from "@material-ui/icons";
 import ItemCartSide from "./ItemCartSide";
 import { Link } from "react-router-dom";
+import Loader from "../Loader/Loader";
 
 function CartSide() {
   const { cart, display, setDisplay, priceInCart, clear } =
@@ -12,6 +13,7 @@ function CartSide() {
     console.log("hace click");
     setDisplay("none");
   }
+  console.log(cart);
 
   if (cart.length > 0) {
     return (
@@ -31,7 +33,7 @@ function CartSide() {
 
         <ul className="listItemCartSide">
           {cart.map((item) => {
-            return <ItemCartSide item={item} cart={cart} />;
+            return <ItemCartSide item={item} cart={cart} key={item.id} />;
           })}
           <li className="total">
             <b>Total:</b> {priceInCart()}{" "}
@@ -45,9 +47,14 @@ function CartSide() {
     );
   } else {
     return (
-      <div className="CartSide" style={{ display: display }}>
-        <Close style={{ padding: ".5em" }} onClick={hiddenCartSide}></Close>
-        <p> esperando a que pase algo</p>
+      <div className="CartSide" style={{ display: display }} key={"total"}>
+        <div className="goRemove">
+          <Close style={{ padding: ".5em" }} onClick={hiddenCartSide}></Close>
+        </div>
+        <div className="cartEmpty">
+          <Loader></Loader>
+          <h2> esperando a que pase algo</h2>
+        </div>
       </div>
     );
   }

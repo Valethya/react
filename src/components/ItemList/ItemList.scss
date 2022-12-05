@@ -1,5 +1,6 @@
 .card{
     width: calc(100% / 3);
+
     .addItem{
         background-color:#f5cee4 ;
         width: 1.2em;
@@ -10,16 +11,14 @@
         width: 100%;
         object-fit: cover;
     }
+   
     .card-detail{
-        height: 160px;
+        height: 120px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items:flex-start;
-        .favAdd{
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
+       
         }
         h3{
             width: 100%;
@@ -27,10 +26,20 @@
         }
         p{
             width: 100%;
+            margin:0;
+            margin-bottom: 1em;
         }
-    }
     div{
     padding: 3px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    .favAdd{
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+    }
     }
 }
 

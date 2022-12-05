@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Favorite } from "@material-ui/icons";
 import { useState, useContext } from "react";
 import { wishListContext } from "../../context/wishListContext";
@@ -8,7 +8,7 @@ function Wish({ product }) {
 
   const { addWishList, wishList } = useContext(wishListContext);
 
-  let item = wishList.some((item) => item.id == product.id);
+  let item = wishList.some((item) => item.id === product.id);
 
   let wish = item ? "en mi wishlist" : "agregar a mi wishlist";
   let color = item ? " #f76bba" : "#000";
@@ -22,14 +22,12 @@ function Wish({ product }) {
     setcolorBtn(" #f76bba");
     addWishList(product);
   }
-  debugger;
   return (
     <div className="addWish" onClick={handleClick}>
       <p>{text}</p>
       <Favorite htmlColor={colorBtn}></Favorite>
     </div>
   );
-  debugger;
 }
 
 export default Wish;

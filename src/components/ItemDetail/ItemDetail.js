@@ -9,7 +9,6 @@ function ItemDetail({ product }) {
   let stock = product.stock;
 
   function handleAdd() {
-    debugger;
     console.log(count);
     if (count < stock) setCount(count + 1);
   }
@@ -28,7 +27,7 @@ function ItemDetail({ product }) {
 
   return (
     <div className="itemDetail">
-      <img src={product.img} />
+      <img src={product.img} alt={product.title} />
       <div className="product-detail">
         <h2>{product.title}</h2>
         <p>{product.description}</p>

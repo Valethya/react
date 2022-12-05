@@ -32,8 +32,6 @@ nav{
             padding-right: 1em;
             transition: 2s;
         }
-       
-  
 }
 
 @media #{$medium-and-up}{
@@ -81,4 +79,6 @@ nav{
         }
     }
 }
-@media #{$large-and-up}{}
+@media #{$large-and-up}{
+    
+}

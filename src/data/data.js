@@ -18,7 +18,7 @@ const products = [
     category: "plush",
     id: 1,
     stock: 8,
-    sale: "false",
+    sale: false,
   },
   {
     title: "AUBREY plush",
@@ -29,7 +29,7 @@ const products = [
     category: "plush",
     id: 2,
     stock: 3,
-    sale: "false",
+    sale: false,
   },
   {
     title: "BASIL plush",
@@ -40,7 +40,7 @@ const products = [
     category: "plush",
     id: 3,
     stock: 7,
-    sale: "false",
+    sale: false,
   },
   {
     title: "KEL plush",
@@ -51,7 +51,7 @@ const products = [
     category: "plush",
     id: 4,
     stock: 13,
-    sale: "false",
+    sale: false,
   },
   {
     title: "MARI plush",
@@ -62,7 +62,7 @@ const products = [
     category: "plush",
     id: 5,
     stock: 4,
-    sale: "false",
+    sale: false,
   },
   {
     title: "HERO plush",
@@ -73,7 +73,7 @@ const products = [
     category: "plush",
     id: 6,
     stock: 10,
-    sale: "false",
+    sale: false,
   },
   {
     title: "OTHERWORLD polera",
@@ -84,7 +84,7 @@ const products = [
     category: "poleras",
     id: 7,
     stock: 21,
-    sale: "false",
+    sale: false,
   },
   {
     title: "PLUTO polera",
@@ -95,7 +95,7 @@ const products = [
     category: "poleras",
     id: 8,
     stock: 14,
-    sale: "false",
+    sale: false,
   },
   {
     title: "EMOTIONS polera",
@@ -106,7 +106,7 @@ const products = [
     category: "poleras",
     id: 9,
     stock: 16,
-    sale: "false",
+    sale: false,
   },
 ];
 

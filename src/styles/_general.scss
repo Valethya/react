@@ -13,6 +13,11 @@ body {
  align-items: center;
 }
 
+:focus-visible{
+  outline-color: none;
+  outline-style: none;
+  outline-width: none;
+}
 
 
 // Media Query Ranges

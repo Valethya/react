@@ -10,29 +10,26 @@ function Item({ product }) {
   const { wishList, addWishList, removeWishList } = useContext(wishListContext);
   const { addToCart, formatPrice, showToastify } = useContext(cartContext);
 
-  let favorite = wishList.find((item) => item.id == product.id);
+  let favorite = wishList.find((item) => item.id === product.id);
 
   let [fav, setFav] = useState(false);
   let [count, setCount] = useState(1);
 
   useEffect(() => {
     if (favorite?.wishList === true) {
-      debugger;
       setFav(true);
     }
   }, [favorite]);
 
   function handleAddToCart() {
-    debugger;
     addToCart(product, count);
     showToastify();
   }
 
   function handleWish() {
-    debugger;
-    let item = wishList.find((item) => item.id == product.id);
+    let item = wishList.find((item) => item.id === product.id);
     console.log("hola", item);
-    if (item == undefined) {
+    if (item === undefined) {
       addWishList(product);
       setFav(true);
     } else {
@@ -42,6 +39,7 @@ function Item({ product }) {
   }
 
   const urlDetail = `/detail/${product.id}`;
+  console.log("estamos viendo que onda", product.id);
   return (
     <div className="card">
       <div>
@@ -51,22 +49,22 @@ function Item({ product }) {
         <div className="card-detail">
           <h3>{product.title}</h3>
           <p>{formatPrice(product.price)}</p>
-          <div className="favAdd">
-            {fav ? (
-              <Favorite
-                id={product.id}
-                onClick={handleWish}
-                style={{ color: "#f76bba" }}
-              />
-            ) : (
-              <FavoriteBorderOutlined
-                onClick={handleWish}
-                id={product.id}
-                style={{ color: "#000" }}
-              />
-            )}
-            <Add onClick={handleAddToCart} className="addItem"></Add>
-          </div>
+        </div>
+        <div className="favAdd">
+          {fav ? (
+            <Favorite
+              id={product.id}
+              onClick={handleWish}
+              style={{ color: "#f76bba" }}
+            />
+          ) : (
+            <FavoriteBorderOutlined
+              onClick={handleWish}
+              id={product.id}
+              style={{ color: "#000" }}
+            />
+          )}
+          <Add onClick={handleAddToCart} className="addItem"></Add>
         </div>
         <Link to={urlDetail}>
           <Button>Ver más</Button>

@@ -12,6 +12,7 @@ import CartSide from "./components/Cart/CartSide";
 import Cart from "./components/Cart/Cart";
 import Footer from "./components/Footer/Footer";
 import Toastify from "./components/Toastify/Toastify";
+import Thankyou from "./components/Thankyou/Thankyou";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
             ></Route>
             <Route path="/detail/:id" element={<ItemDetailContainer />}></Route>
             <Route path="/cart" element={<Cart />}></Route>
+            <Route path="/thankyou/:idOrder" element={<Thankyou />}></Route>
           </Routes>
         </WishListContextProvider>
         <Toastify />

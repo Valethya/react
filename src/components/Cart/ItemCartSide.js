@@ -4,7 +4,7 @@ import { cartContext } from "../../context/cartContext";
 import AddRemove from "../AddRemove/AddRemove";
 
 function ItemCartSide({ item }) {
-  const { removeItemCartSide, setCart, cart, formatPrice } =
+  const { removeItemCartSide, setCart, cart, formatPrice, saveInLocalStorage } =
     useContext(cartContext);
 
   let stock = item.stock;
@@ -12,34 +12,30 @@ function ItemCartSide({ item }) {
 
   let idItem = item.id;
 
-  let itemCart = cart.findIndex((item) => item.id == idItem);
-
-  let [count, setCount] = useState(cart[itemCart].count);
+  let itemCart = cart.findIndex((item) => item.id === idItem);
 
   function handleAdd() {
-    if (count < stock) newCart[itemCart].count += 1;
+    if (cart[itemCart].count < stock) newCart[itemCart].count += 1;
     setCart(newCart);
-
-    setCount(newCart[itemCart].count);
+    saveInLocalStorage(cart);
   }
   function handleRemove() {
-    if (count > 0) newCart[itemCart].count -= 1;
+    if (cart[itemCart].count > 0) newCart[itemCart].count -= 1;
     debugger;
-    if (newCart[itemCart].count == 0) {
+    if (newCart[itemCart].count === 0) {
       removeItemCartSide(item);
-      setCount(newCart[itemCart].count);
     } else {
       setCart(newCart);
-      setCount(newCart[itemCart].count);
+      saveInLocalStorage(cart);
     }
   }
 
   function removeItem() {
     removeItemCartSide(item);
   }
-  debugger;
+
   return (
-    <li className="itemCartSide">
+    <li className="itemCartSide" key={item.id}>
       <img src={item.img} alt={item.title} />
       <div className="detail">
         <h3>{item.title}</h3>

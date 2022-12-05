@@ -1,21 +1,42 @@
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 
 export const wishListContext = createContext();
 
 export function WishListContextProvider({ children }) {
   const [wishList, setWishList] = useState([]);
 
+  const saveInLocalStorage = (array) => {
+    localStorage.setItem("wishList", JSON.stringify(array));
+  };
+
+  const recoveryLocalStorage = () => {
+    if (localStorage.getItem("wishList")) {
+      let newWishList = [...wishList];
+      let recoveryCart = JSON.parse(localStorage.getItem("wishList"));
+      console.log("y esto", recoveryCart);
+      recoveryCart.forEach((item) => {
+        newWishList.push(item);
+        setWishList(newWishList);
+      });
+    }
+    console.log("veamos", wishList);
+  };
+
+  useEffect(() => {
+    recoveryLocalStorage();
+  }, []);
+
   function addWishList(product) {
-    debugger;
-    let itemInWishList = wishList.findIndex((item) => item.id == product.id);
+    let itemInWishList = wishList.findIndex((item) => item.id === product.id);
 
     let newWishList = [...wishList];
 
-    if (itemInWishList == -1) {
+    if (itemInWishList === -1) {
       product.wishList = true;
       newWishList.push(product);
       setWishList(newWishList);
     }
+    saveInLocalStorage(newWishList);
   }
 
   function removeWishList(item) {
@@ -23,6 +44,7 @@ export function WishListContextProvider({ children }) {
 
     let newWishList = wishList.filter((item) => item.id !== idItem);
     setWishList(newWishList);
+    saveInLocalStorage(newWishList);
   }
 
   return (
