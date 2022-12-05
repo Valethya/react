@@ -13,6 +13,7 @@ import Cart from "./components/Cart/Cart";
 import Footer from "./components/Footer/Footer";
 import Toastify from "./components/Toastify/Toastify";
 import Thankyou from "./components/Thankyou/Thankyou";
+import NavSide from "./components/NavBar/NavSide";
 
 function App() {
   return (
@@ -20,9 +21,10 @@ function App() {
       <Router>
         <Header />
         <NavBar />
+        {/* <NavSide /> */}
         <WishListContextProvider>
           <Routes>
-            <Route path="/" element={<ItemListContainer />}></Route>
+            <Route path="/React" element={<ItemListContainer />}></Route>
             <Route
               path="category/:category"
               element={<ItemListContainer />}

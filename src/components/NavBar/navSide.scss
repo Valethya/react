@@ -1,0 +1,29 @@
+.navSide{
+    width: 100%;
+    background: #c5f3dd;
+    z-index: 500;
+    box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 12%), 0 1px 5px 0 rgb(0 0 0 / 20%);
+    ul{
+        display: flex;
+        margin: 0;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        li{
+            padding: 0.5em;
+            list-style: none;
+            width: 50%;
+            text-align:center ;
+            a{
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+@media #{$medium-and-up}{
+    .navSide{
+     display: none;
+    }
+}

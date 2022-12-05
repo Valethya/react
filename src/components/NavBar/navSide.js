@@ -1,19 +1,19 @@
-import React, { useContext } from "react";
-import CartWidget from "./CartWidget";
-import Badge from "../Badge/Badge";
-import { Menu } from "@material-ui/icons";
+import React from "react";
 import { Link } from "react-router-dom";
-import { cartContext } from "../../context/cartContext";
 
-function navSide() {
+function NavSide({ display }) {
   return (
-    <ul className="categoryCel">
-      <li>
-        <Link to="/category/plush">Plush</Link>
-      </li>
-      <li>
-        <Link to="/category/poleras">poleras</Link>
-      </li>
-    </ul>
+    <div className="navSide" style={{ display: display }}>
+      <ul>
+        <li>
+          <Link to="/category/plush">Plush</Link>
+        </li>
+        <li>
+          <Link to="/category/poleras">poleras</Link>
+        </li>
+      </ul>
+    </div>
   );
 }
+
+export default NavSide;
