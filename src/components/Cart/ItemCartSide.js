@@ -21,7 +21,6 @@ function ItemCartSide({ item }) {
   }
   function handleRemove() {
     if (cart[itemCart].count > 0) newCart[itemCart].count -= 1;
-    debugger;
     if (newCart[itemCart].count === 0) {
       removeItemCartSide(item);
     } else {

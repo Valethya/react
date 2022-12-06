@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import {useParams} from "react-router-dom"
 import Loader from "../Loader/Loader";
 import getItemsOrdered from "../../services/firestore";
+import Toastify from "../Toastify/Toastify";
 
 
 
@@ -12,6 +13,7 @@ function ItemListContainer() {
 
   const [products, setProducts] = useState(null);
   const { category } = useParams();
+
 
   async function getItemsAsync() {
     if (!category) {
@@ -27,12 +29,28 @@ function ItemListContainer() {
     getItemsAsync();
   }, [category]);
 
+  ///toast 
+  const [toastList, setToastList] = useState([]);
 
+  let toastProperty = null;
+
+  function showToast() {
+    
+    toastProperty = {
+      message: "Tu producto ha sido agregado a tu carrito",
+      id: toastList.length+1,
+    };
+    setToastList([...toastList, toastProperty]);
+    console.log("vaya que funciona!")
+  }
+  
+  ////
   return (
     <div className="itemListContainer">
      {products?
-         <ItemList products={products} />:<Loader/>
+         <ItemList products={products} showToast ={()=>showToast()} />:<Loader/>
       }
+     <Toastify toastList={toastList} setToastList={setToastList} />
       </div>
       
     );

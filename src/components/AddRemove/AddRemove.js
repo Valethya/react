@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
 import { Add, Remove } from "@material-ui/icons";
-import Button from "../Buttons/Button";
 import { cartContext } from "../../context/cartContext";
 
 function AddRemove({ handleAdd, handleRemove, count }) {

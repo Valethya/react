@@ -6,10 +6,9 @@ import { Link } from "react-router-dom";
 import { wishListContext } from "../../context/wishListContext";
 import { cartContext } from "../../context/cartContext";
 
-function Item({ product }) {
+function Item({ product, showToast }) {
   const { wishList, addWishList, removeWishList } = useContext(wishListContext);
-  const { addToCart, formatPrice, showToastify, hiddenToastify } =
-    useContext(cartContext);
+  const { addToCart, formatPrice } = useContext(cartContext);
 
   let favorite = wishList.find((item) => item.id === product.id);
 
@@ -21,11 +20,9 @@ function Item({ product }) {
       setFav(true);
     }
   }, [favorite]);
-
   function handleAddToCart() {
     addToCart(product, count);
-    showToastify();
-    setTimeout(hiddenToastify, 4000);
+    showToast();
   }
 
   function handleWish() {
@@ -41,7 +38,7 @@ function Item({ product }) {
   }
 
   const urlDetail = `/detail/${product.id}`;
-  console.log("estamos viendo que onda", product.id);
+
   return (
     <div className="card">
       <div>

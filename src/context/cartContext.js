@@ -92,7 +92,6 @@ export function CartContextProvider({ children }) {
 
   function removeItemCartSide(item) {
     let idItem = item.id;
-    debugger;
     let newCart = cart.filter((item) => item.id !== idItem);
     console.log(newCart);
     setCart(newCart);
@@ -135,20 +134,13 @@ export function CartContextProvider({ children }) {
   ////
 
   ///TOASTIFY
-  const [show, setShow] = useState("none");
-  function showToastify() {
-    setShow("flex");
-  }
-  function hiddenToastify() {
-    setShow("none");
-  }
 
+  ////
   return (
     <cartContext.Provider
       value={{
         cart,
         addToCart,
-        saludoContext,
         itemsInCart,
         display,
         setDisplay,
@@ -159,9 +151,6 @@ export function CartContextProvider({ children }) {
         priceInCart,
         formatPrice,
         clear,
-        show,
-        showToastify,
-        hiddenToastify,
         saveInLocalStorage,
         onInputChange,
         data,

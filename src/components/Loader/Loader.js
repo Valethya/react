@@ -1,4 +1,3 @@
-import { defaultListboxReducer } from "@mui/base";
 import React from "react";
 import mewo from "../../Svg/mewo.svg";
 import z from "../../Svg/Z.svg";
@@ -10,12 +9,25 @@ function Loader() {
         {" "}
         <img
           src={mewo}
+          alt={"gato negro dormido"}
           className="mewo
         "
         ></img>
-        <img src={z} className="tinyZ"></img>
-        <img src={z} className="littleZ"></img>
-        <img src={z} className="bigZ"></img>
+        <img
+          src={z}
+          alt={"letra z, ematopeya de dormir"}
+          className="tinyZ"
+        ></img>
+        <img
+          src={z}
+          alt={"letra z, ematopeya de dormir"}
+          className="littleZ"
+        ></img>
+        <img
+          src={z}
+          alt={"letra z, ematopeya de dormir"}
+          className="bigZ"
+        ></img>
       </div>
     </div>
   );

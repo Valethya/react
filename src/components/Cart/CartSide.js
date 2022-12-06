@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import { cartContext } from "../../context/cartContext";
 import { Close, RemoveShoppingCart, ArrowBack } from "@material-ui/icons";
 import ItemCartSide from "./ItemCartSide";

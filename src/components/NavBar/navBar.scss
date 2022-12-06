@@ -39,49 +39,52 @@
 
 
 @media #{$medium-and-up}{
-    nav{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;      
-        .hamburger-menu{
-           display: none;
-        }
-        .logo{
-            margin-left: 1em;
-            text-decoration: none;
-        }
-        ul{
-            width: 60%;
-            height: 100%;
-            margin: 0;
+    .navBar{
+        nav{
             display: flex;
-            justify-content: flex-end;
-            align-items: center;
-            li{
-                width: 100%;
+            justify-content: space-between;
+            align-items: center;      
+            .hamburger-menu{
+               display: none;
+            }
+            .logo{
+                margin-left: 1em;
+                text-decoration: none;
+            }
+            ul{
+                width: 60%;
                 height: 100%;
-                list-style: none;
-                a{
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
+                margin: 0;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                li{
                     width: 100%;
                     height: 100%;
-                    transition: 2s;
-                    padding-right: 0;
-                    &:hover{
-                        background: #74fdbb;
-                        transition: 1s;
+                    list-style: none;
+                    a{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 100%;
+                        height: 100%;
+                        transition: 2s;
+                        padding-right: 0;
+                        &:hover{
+                            background: #74fdbb;
+                            transition: 1s;
+                        }
                     }
+            
                 }
         
             }
-    
-        }
-        .cartWidget{
-            display: none;
+            .cartWidget{
+                display: none;
+            }
         }
     }
+   
 }
 @media #{$large-and-up}{
     
