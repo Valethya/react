@@ -88,6 +88,6 @@ export async function exportArrayToFirebase() {
     item.index = item.id;
     delete item.id;
     let docOrder = await addDoc(collectionRef, item);
-    console.log("documento creado id", docOrder.id);
+    "documento creado id", docOrder.id;
   }
 }

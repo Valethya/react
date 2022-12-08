@@ -10,10 +10,10 @@ function CartSide() {
     useContext(cartContext);
 
   function hiddenCartSide() {
-    console.log("hace click");
+    ("hace click");
     setDisplay("none");
   }
-  console.log(cart);
+  cart;
 
   if (cart.length > 0) {
     return (

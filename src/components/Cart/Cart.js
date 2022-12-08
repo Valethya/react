@@ -18,7 +18,7 @@ function Cart() {
       date: new Date(),
     };
     const orderId = await createOrder(order);
-    console.log("este es el if", order);
+    "este es el if", order;
     navigate(`/thankyou/${orderId}`);
     clear();
   }

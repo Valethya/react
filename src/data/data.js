@@ -12,7 +12,7 @@ const products = [
   {
     title: "OMORI plush",
     price: 28000,
-    img: omori,
+    // img: omori,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate. ",
     category: "plush",
@@ -23,7 +23,7 @@ const products = [
   {
     title: "AUBREY plush",
     price: 28000,
-    img: aubrey,
+    // img: aubrey,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate. ",
     category: "plush",
@@ -34,7 +34,7 @@ const products = [
   {
     title: "BASIL plush",
     price: 28000,
-    img: basil,
+    // img: basil,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate. ",
     category: "plush",
@@ -45,7 +45,7 @@ const products = [
   {
     title: "KEL plush",
     price: 28000,
-    img: kel,
+    // img: kel,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate. ",
     category: "plush",
@@ -56,7 +56,7 @@ const products = [
   {
     title: "MARI plush",
     price: 28000,
-    img: mari,
+    // img: mari,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate. ",
     category: "plush",
@@ -67,7 +67,7 @@ const products = [
   {
     title: "HERO plush",
     price: 28000,
-    img: hero,
+    // img: hero,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate. ",
     category: "plush",
@@ -78,7 +78,7 @@ const products = [
   {
     title: "OTHERWORLD polera",
     price: 28000,
-    img: otherworld,
+    // img: otherworld,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate. ",
     category: "poleras",
@@ -89,7 +89,7 @@ const products = [
   {
     title: "PLUTO polera",
     price: 28000,
-    img: pluto,
+    // img: pluto,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate. ",
     category: "poleras",
@@ -100,7 +100,7 @@ const products = [
   {
     title: "EMOTIONS polera",
     price: 28000,
-    img: emotions,
+    // img: emotions,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate. ",
     category: "poleras",

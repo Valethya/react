@@ -6,11 +6,7 @@ export const cartContext = createContext();
 // 2. Creamos nuestro Context Provider
 
 export function CartContextProvider({ children }) {
-  const saludoContext = "Hola Context!";
-
   const [cart, setCart] = useState([]);
-
-  const [message, setMessage] = useState("");
 
   /// formatea el precio en pesos chilenos
 
@@ -30,13 +26,13 @@ export function CartContextProvider({ children }) {
     if (localStorage.getItem("cart")) {
       let newCart = [...cart];
       let recoveryCart = JSON.parse(localStorage.getItem("cart"));
-      console.log("y esto", recoveryCart);
+      "y esto", recoveryCart;
       recoveryCart.forEach((item) => {
         newCart.push(item);
         setCart(newCart);
       });
     }
-    console.log("veamos", cart);
+    "veamos", cart;
   };
 
   useEffect(() => {
@@ -44,6 +40,7 @@ export function CartContextProvider({ children }) {
   }, []);
 
   ///agregar al carrito
+  const [itemCount, setItemCount] = useState(false);
 
   function addToCart(product, count) {
     let itemAlreadyInCart = cart.findIndex(
@@ -51,25 +48,21 @@ export function CartContextProvider({ children }) {
     );
 
     let newCart = [...cart];
-
-    ///si el item ya esta en carrito o no
     if (itemAlreadyInCart !== -1) {
       let amount = newCart[itemAlreadyInCart].count;
-
       ///si se agrega mas o menos items de que hay en stock
       if ((amount += count) > newCart[itemAlreadyInCart].stock) {
-        setMessage("no tenemos suificiente stock!");
+        setItemCount((prevItemCount) => (prevItemCount = true));
       } else {
         newCart[itemAlreadyInCart].count += count;
-
+        setItemCount(false);
         setCart(newCart);
         saveInLocalStorage(cart);
-        setMessage("");
       }
     } else {
       product.count = count;
       newCart.push(product);
-
+      setItemCount(false);
       setCart(newCart);
       saveInLocalStorage(cart);
     }
@@ -93,7 +86,7 @@ export function CartContextProvider({ children }) {
   function removeItemCartSide(item) {
     let idItem = item.id;
     let newCart = cart.filter((item) => item.id !== idItem);
-    console.log(newCart);
+    newCart;
     setCart(newCart);
     saveInLocalStorage(newCart);
   }
@@ -144,8 +137,6 @@ export function CartContextProvider({ children }) {
         itemsInCart,
         display,
         setDisplay,
-        setMessage,
-        message,
         removeItemCartSide,
         setCart,
         priceInCart,
@@ -155,6 +146,7 @@ export function CartContextProvider({ children }) {
         onInputChange,
         data,
         setData,
+        itemCount,
       }}
     >
       {children}

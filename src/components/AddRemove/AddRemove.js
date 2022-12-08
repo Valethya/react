@@ -1,10 +1,7 @@
-import React, { useContext } from "react";
+import React from "react";
 import { Add, Remove } from "@material-ui/icons";
-import { cartContext } from "../../context/cartContext";
 
 function AddRemove({ handleAdd, handleRemove, count }) {
-  const { message } = useContext(cartContext);
-
   return (
     <div className="AddRemove">
       <div>
@@ -13,7 +10,6 @@ function AddRemove({ handleAdd, handleRemove, count }) {
 
         <Add className="AddRemove-btn add" onClick={handleAdd} />
       </div>
-      <p>{message}</p>
     </div>
   );
 }

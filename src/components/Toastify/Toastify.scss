@@ -15,22 +15,19 @@
         background-color: #fe019a;
         color:#fff;
         border-radius: 2px;
-        float: right;
-      
         opacity: 0.9;
-     
         box-shadow: 0px -3px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 12%), 0 1px 5px 0 rgb(0 0 0 / 20%);
         z-index: 2100;
     }
+
+   
     .active{
         animation: showToastcel 1s forwards;
         bottom: 0;
         right:0;
         
     }
-    .inactive{
-        animation: hiddenToastCel 1s forwards;
-    }
+
 }
 
 
@@ -41,18 +38,16 @@
         right: 6vh;
         width: 30%;
         .toastify{
-            transition: 3s;
+            transition:ease 1s;
             margin-bottom: 1rem;
             box-shadow: 5px 6px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 12%), 0 1px 5px 0 rgb(0 0 0 / 20%);
+            transform: translateY(0);
          
         }
         .active{
           animation: showToast 1s forwards;
-       
     }
-    .inactive{
-        animation: hiddenToast 1s forwards;
-    }
+
     }
     
 }
@@ -63,9 +58,7 @@
     from{
         transform: translateX(100%);
     }
-    to{
-        transform: translateX(0);
-    }
+
 }
 
 @keyframes showToast{
@@ -75,24 +68,4 @@
     to{
         transform: translateY(0);
     }
-}
-
-///keyframes para ocultar el toast tanto en el cel como pc
-/// 
-@keyframes hiddenToastCel{
-from{
-    transform: translatex(0);
-}
-to{
-    transform: translatex(100%);
-}
-}
-
-@keyframes hiddenToast{
-from{
-    transform: translatex(100%);
-}
-to{
-    transform: translatex(0);
-}
 }

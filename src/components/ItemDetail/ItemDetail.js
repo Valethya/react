@@ -4,25 +4,25 @@ import AddRemove from "../AddRemove/AddRemove";
 import Wish from "../wish/wish";
 import { cartContext } from "../../context/cartContext";
 
-function ItemDetail({ product }) {
+function ItemDetail({ product, showToast }) {
   let [count, setCount] = React.useState(1);
   let stock = product.stock;
 
   function handleAdd() {
-    console.log(count);
+    count;
     if (count < stock) setCount(count + 1);
   }
   function handleRemove() {
-    console.log("resta");
+    ("resta");
     if (count > 0) setCount(count - 1);
   }
 
   const { addToCart, formatPrice, showToastify } = useContext(cartContext);
 
   function handleAddToCart() {
-    console.log("funciona");
+    ("funciona");
     addToCart(product, count);
-    showToastify();
+    showToast();
   }
 
   return (

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { StrictMode } from "react";
 import "../src/styles/styles.scss";
 import ItemListContainer from "./components/ItemList/ItemListContainer";
 
@@ -11,31 +11,36 @@ import { WishListContextProvider } from "./context/wishListContext";
 import CartSide from "./components/Cart/CartSide";
 import Cart from "./components/Cart/Cart";
 import Footer from "./components/Footer/Footer";
-import Toastify from "./components/Toastify/Toastify";
 import Thankyou from "./components/Thankyou/Thankyou";
 
 function App() {
   return (
     <CartContextProvider>
-      <Router>
-        <Header />
-        <NavBar />
-        <WishListContextProvider>
-          <Routes>
-            <Route path="/React" element={<ItemListContainer />}></Route>
-            <Route
-              path="category/:category"
-              element={<ItemListContainer />}
-            ></Route>
-            <Route path="/detail/:id" element={<ItemDetailContainer />}></Route>
-            <Route path="/cart" element={<Cart />}></Route>
-            <Route path="/thankyou/:idOrder" element={<Thankyou />}></Route>
-          </Routes>
-        </WishListContextProvider>
-
-        <Footer></Footer>
-        <CartSide></CartSide>
-      </Router>
+      <WishListContextProvider>
+        <Router>
+          <Header />
+          <NavBar />
+          <StrictMode>
+            <WishListContextProvider>
+              <Routes>
+                <Route path="/React" element={<ItemListContainer />}></Route>
+                <Route
+                  path="category/:category"
+                  element={<ItemListContainer />}
+                ></Route>
+                <Route
+                  path="/detail/:id"
+                  element={<ItemDetailContainer />}
+                ></Route>
+                <Route path="/cart" element={<Cart />}></Route>
+                <Route path="/thankyou/:idOrder" element={<Thankyou />}></Route>
+              </Routes>
+            </WishListContextProvider>
+            <CartSide></CartSide>
+          </StrictMode>
+          <Footer></Footer>
+        </Router>
+      </WishListContextProvider>
     </CartContextProvider>
   );
 }
