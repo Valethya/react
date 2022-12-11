@@ -5,7 +5,7 @@ import { cartContext } from "../../context/cartContext";
 function Thankyou() {
   const idOrder = useParams().idOrder;
   const { data } = useContext(cartContext);
-  data;
+
   return (
     <div className="Thankyou">
       <h1>

@@ -27,7 +27,7 @@ function Item({ product, showToast }) {
 
   function handleWish() {
     let item = wishList.find((item) => item.id === product.id);
-    "hola", item;
+
     if (item === undefined) {
       addWishList(product);
       setFav(true);

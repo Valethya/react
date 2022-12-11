@@ -26,13 +26,12 @@ export function CartContextProvider({ children }) {
     if (localStorage.getItem("cart")) {
       let newCart = [...cart];
       let recoveryCart = JSON.parse(localStorage.getItem("cart"));
-      "y esto", recoveryCart;
+
       recoveryCart.forEach((item) => {
         newCart.push(item);
         setCart(newCart);
       });
     }
-    "veamos", cart;
   };
 
   useEffect(() => {
@@ -86,7 +85,7 @@ export function CartContextProvider({ children }) {
   function removeItemCartSide(item) {
     let idItem = item.id;
     let newCart = cart.filter((item) => item.id !== idItem);
-    newCart;
+
     setCart(newCart);
     saveInLocalStorage(newCart);
   }
@@ -127,7 +126,7 @@ export function CartContextProvider({ children }) {
   ////
 
   ///TOASTIFY
-
+  const [style, setStyle] = useState("toastify active");
   ////
   return (
     <cartContext.Provider
@@ -147,6 +146,8 @@ export function CartContextProvider({ children }) {
         data,
         setData,
         itemCount,
+        setStyle,
+        style,
       }}
     >
       {children}

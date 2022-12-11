@@ -32,9 +32,9 @@ function ItemListContainer() {
 
   ///toast 
   
-  const [toastList, setToastList] = useState([]);
+  const [toast, setToast] = useState([]);
 
-const {itemCount}=useContext(cartContext)
+const {itemCount,setStyle}=useContext(cartContext)
 
 
 
@@ -42,14 +42,15 @@ const {itemCount}=useContext(cartContext)
   let toastProperty = null;
 
   function showToast() {
+    setStyle("toastify active")
          toastProperty={
            messageStock: "No tenemos suficiente stock del producto",
            messageAdd: "Tu producto ha sido agregado a tu carrito",
            colorStock: "#fe019a",
            colorAdd: "aqua",
-              id: toastList.length + 1,
+              id: toast.length + 1,
         }
-    setToastList([ toastProperty]);
+    setToast([toastProperty]);
   }
   
   ////
@@ -58,7 +59,7 @@ const {itemCount}=useContext(cartContext)
      {products?
          <ItemList products={products} showToast ={()=>showToast(itemCount)} />:<Loader/>
       }
-     <Toastify toastList={toastList} setToastList={setToastList} />
+     <Toastify toast={toast} setToast={setToast} />
       </div>
       
     );

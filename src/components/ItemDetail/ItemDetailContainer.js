@@ -32,11 +32,13 @@ function ItemDetailContainer() {
 
   function showToast() {
     toastProperty = {
-      message: "Tu producto ha sido agregado a tu carrito",
+      messageStock: "No tenemos suficiente stock del producto",
+      messageAdd: "Tu producto ha sido agregado a tu carrito",
+      colorStock: "#fe019a",
+      colorAdd: "aqua",
       id: toastList.length + 1,
     };
-    setToastList([...toastList, toastProperty]);
-    ("vaya que funciona!");
+    setToastList([toastProperty]);
   }
 
   return (

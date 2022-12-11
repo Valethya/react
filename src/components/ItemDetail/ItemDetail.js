@@ -9,7 +9,6 @@ function ItemDetail({ product, showToast }) {
   let stock = product.stock;
 
   function handleAdd() {
-    count;
     if (count < stock) setCount(count + 1);
   }
   function handleRemove() {

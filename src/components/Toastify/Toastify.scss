@@ -38,7 +38,6 @@
         right: 6vh;
         width: 30%;
         .toastify{
-            transition:ease 1s;
             margin-bottom: 1rem;
             box-shadow: 5px 6px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 12%), 0 1px 5px 0 rgb(0 0 0 / 20%);
             transform: translateY(0);
@@ -46,6 +45,9 @@
         }
         .active{
           animation: showToast 1s forwards;
+    }
+    .inactive{
+        animation: hiddenToast 1s forwards;
     }
 
     }
@@ -67,5 +69,14 @@
     }
     to{
         transform: translateY(0);
+    }
+}
+
+@keyframes hiddenToast{
+    from{
+        transform: translateY(0);
+    }
+    to{
+        transform: translateY(200%);
     }
 }

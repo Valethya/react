@@ -12,7 +12,7 @@ export default function Form(props) {
     e.preventDefault();
     props.onSubmit(e, data);
   }
-
+  const { cart } = useContext(cartContext);
   return (
     <form onSubmit={onSubmit}>
       <h3>Ingresa tus datos porfavor</h3>
@@ -41,13 +41,20 @@ export default function Form(props) {
         htmlfor="phone"
         onChange={onInputChange}
       ></Input>
-      <Button
-        oneTouchButton={(e) => onSubmit(e, data)}
+      <button
+        className="btn"
+        onclick={(e) => onSubmit(e, data)}
         data={data}
         type="submit"
+        disabled={
+          data?.name === "" ||
+          data?.phone === "" ||
+          data?.email === "" ||
+          !cart.length
+        }
       >
         Finalizar compra
-      </Button>
+      </button>
     </form>
   );
 }

@@ -1,18 +1,17 @@
 import { Close } from "@material-ui/icons";
-import React, { useContext, useEffect, useCallback } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { cartContext } from "../../context/cartContext";
 
-function Toastify({ toastList, setToastList }) {
-  const { itemCount } = useContext(cartContext);
+function Toastify({ toast, setToast }) {
+  const { itemCount, setStyle, style } = useContext(cartContext);
 
   const deleteToast = () => {
-    const toastListItem = [];
-    setToastList(toastListItem);
+    setStyle("toastify inactive");
   };
 
   useEffect(() => {
     const interval = setInterval(() => {
-      if (toastList.length) {
+      if (toast.length) {
         deleteToast();
       }
     }, 1100);
@@ -20,13 +19,15 @@ function Toastify({ toastList, setToastList }) {
     return () => {
       clearInterval(interval);
     };
-  }, [toastList, deleteToast]);
+  }, [toast, deleteToast]);
+
   return (
     <div className="toast active">
-      {toastList.map((toast) => {
+      {toast.map((toast) => {
         return (
           <div
-            className="toastify active"
+            className={style}
+            key={toast.id}
             style={{
               background: itemCount ? toast.colorStock : toast.colorAdd,
             }}

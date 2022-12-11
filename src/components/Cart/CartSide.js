@@ -13,7 +13,6 @@ function CartSide() {
     ("hace click");
     setDisplay("none");
   }
-  cart;
 
   if (cart.length > 0) {
     return (

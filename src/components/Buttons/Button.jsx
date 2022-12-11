@@ -5,9 +5,9 @@ import { cartContext } from "../../context/cartContext";
 
 
 
-function Button({ children, key, oneTouchButton, type, data }) {
+function Button({ children, key, oneTouchButton, type }) {
 
-    const{cart}=useContext(cartContext)
+
     let [colorBtn, setcolorBtn] = useState("#000")
 
     function colorChange() {
@@ -21,7 +21,7 @@ function Button({ children, key, oneTouchButton, type, data }) {
         ("no funciona creo")
     }
  
-    return <button type={type} onClick={handlerClick} key={key} className="btn" disabled={data?.name === "" || data?.phone === "" || data?.email === ""||!cart.length} style={{ background: colorBtn,border:colorBtn }} >
+    return <button type={type} onClick={handlerClick} key={key} className="btn"  style={{ background: colorBtn,border:colorBtn }} >
         {children}
     </button>
 }

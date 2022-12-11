@@ -13,13 +13,12 @@ export function WishListContextProvider({ children }) {
     if (localStorage.getItem("wishList")) {
       let newWishList = [...wishList];
       let recoveryCart = JSON.parse(localStorage.getItem("wishList"));
-      "y esto", recoveryCart;
+
       recoveryCart.forEach((item) => {
         newWishList.push(item);
         setWishList(newWishList);
       });
     }
-    "veamos", wishList;
   };
 
   useEffect(() => {
