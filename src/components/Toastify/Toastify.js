@@ -20,7 +20,7 @@ function Toastify({ toast, setToast }) {
       clearInterval(interval);
     };
   }, [toast, deleteToast]);
-
+  debugger;
   return (
     <div className="toast active">
       {toast.map((toast) => {

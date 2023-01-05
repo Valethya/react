@@ -29,7 +29,7 @@ function ItemDetailContainer() {
   const [toastList, setToastList] = useState([]);
 
   let toastProperty = null;
-
+  debugger;
   function showToast() {
     toastProperty = {
       messageStock: "No tenemos suficiente stock del producto",
@@ -48,7 +48,7 @@ function ItemDetailContainer() {
       ) : (
         <ItemDetail product={prod} showToast={showToast} />
       )}{" "}
-      <Toastify toastList={toastList} setToastList={setToastList} />
+      <Toastify toast={toastList} setToast={setToastList} />
     </div>
   );
 }

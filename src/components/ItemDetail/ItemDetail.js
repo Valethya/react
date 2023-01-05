@@ -16,7 +16,7 @@ function ItemDetail({ product, showToast }) {
     if (count > 0) setCount(count - 1);
   }
 
-  const { addToCart, formatPrice, showToastify } = useContext(cartContext);
+  const { addToCart, formatPrice } = useContext(cartContext);
 
   function handleAddToCart() {
     ("funciona");
